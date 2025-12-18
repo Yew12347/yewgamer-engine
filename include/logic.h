@@ -3,20 +3,30 @@
 
 #include "render.h"
 #include "audio.h"
+#include "keyhand.h"
 #include <stdbool.h>
 
 typedef struct Game {
     RenderEngine render;
     bool running;
+
+    // Input handling
+    KeyHand kh;
+
+    // Movable rectangle
+    int rect_x;
+    int rect_y;
+    int rect_w;
+    int rect_h;
 } Game;
 
-// Initialize the game state, render/audio engines
+// Initialize game
 bool game_init(Game *game);
 
-// Run the main loop
+// Run game loop
 void game_run(Game *game);
 
-// Clean up
+// Shutdown game
 void game_shutdown(Game *game);
 
 #endif

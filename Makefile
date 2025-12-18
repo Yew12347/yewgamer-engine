@@ -6,7 +6,7 @@ CFLAGS = -Wall -Wextra -Wpedantic -std=c99 \
 TARGET_DIR = target
 TARGET = $(TARGET_DIR)/engine
 
-SRC = src/main.c src/audio.c src/render.c src/logic.c
+SRC = src/main.c src/audio.c src/render.c src/logic.c src/keyhand.c
 
 LIBDIR = libs
 STATIC_LIBS = $(wildcard $(LIBDIR)/*.a)
